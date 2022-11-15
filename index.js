@@ -3,13 +3,18 @@ const DOMselectors = {
   box: document.getElementById("container-box"),
   input: document.querySelector("#input"),
 };
-const cat = "name";
+const cat = "TELLER";
 DOMselectors.box.insertAdjacentHTML(
   "beforebegin",
-  `<h1>What is your ${cat}</h1>`
+  `<h1>FORTUNE ${cat}</h1>`
 );
 DOMselectors.button.addEventListener("click", function () {
   let input = DOMselectors.input.value;
-  DOMselectors.box.insertAdjacentHTML("beforeend", `<p>Your name is ${input}</p>`);
+  DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}, You Are Destined For Success</p>`);
 DOMselectors.input.value = "";
 });
+DOMselectors.clearbtn.addEventListener("click", function (){
+ let input = DOMselectors.input.value;
+  DOMselectors.input.value= "";
+
+})
