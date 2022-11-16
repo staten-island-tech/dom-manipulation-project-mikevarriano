@@ -1,18 +1,20 @@
 .bigblackpage{
 background-color: black;
-
+text-align: center;
 }
 
 h1{
 color: aliceblue;
-
+text-align: center;
 }
 .text{
 color: aliceblue;
-
+text-align: center;
 }
 p{
  color: aliceblue;
+ text-align: center;
 }
+
 
 

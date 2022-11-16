@@ -15,6 +15,6 @@ DOMselectors.input.value = "";
 });
 DOMselectors.clearbtn.addEventListener("click", function (){
  let input = DOMselectors.input.value;
-  DOMselectors.input.value= "";
+ DOMselectors.input.value = "";
 
-})
+});
