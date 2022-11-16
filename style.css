@@ -4,16 +4,19 @@ text-align: center;
 }
 
 h1{
-color: aliceblue;
+color: red;
 text-align: center;
+font-size: 4rem;
 }
 .text{
 color: aliceblue;
 text-align: center;
+font-size: 2rem;
 }
 p{
  color: aliceblue;
  text-align: center;
+ font-size: 2rem;
 }
 
 
