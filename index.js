@@ -2,11 +2,12 @@ const DOMselectors = {
   button: document.getElementById("btn"),
   box: document.getElementById("container-box"),
   input: document.querySelector("#input"),
+  clearbtn: document.getElementById("clearbtn"),
 };
 const cat = "TELLER";
 DOMselectors.box.insertAdjacentHTML("beforebegin", `<h1>FORTUNE ${cat}</h1>`);
 const rchoices = [
-  "you will marry Andrew Tate",
+  "you will enroll in Hustlers University",
   "what color is your Bugatti???",
   "you will have thirty children",
   "you are destined for success",
