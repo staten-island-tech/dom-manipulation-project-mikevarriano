@@ -3,6 +3,7 @@ const DOMselectors = {
   box: document.getElementById("container-box"),
   input: document.querySelector("#input"),
   clearbtn: document.getElementById("clearbtn"),
+  button: document.querySelectorAll(".remove"),
 };
 const cat = "TELLER";
 DOMselectors.box.insertAdjacentHTML("beforebegin", `<h1>FORTUNE ${cat}</h1>`);
@@ -23,9 +24,12 @@ DOMselectors.button.addEventListener("click", function () {
   let input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML(
     "beforeend",
-    `<p>${input}, ${RandomChoice()}</p>`
+    `<div id= "container><p>${input}, ${RandomChoice()}</p>
+    <button class="remove" id="btn4">remove</button></div>`
   );
   DOMselectors.input.value = "";
+  let container = document.getElementById("container");
+  let remove = document.getElementById("btn4");
 });
 DOMselectors.clearbtn.addEventListener("click", function () {
   let input = DOMselectors.input.value;
