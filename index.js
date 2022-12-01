@@ -3,7 +3,8 @@ const DOMselectors = {
   box: document.getElementById("container-box"),
   input: document.querySelector("#input"),
   clearbtn: document.getElementById("clearbtn"),
-  button: document.querySelectorAll(".remove"),
+  button2: document.querySelectorAll(".remove"),
+  container: document.getElementById("container"),
 };
 const cat = "TELLER";
 DOMselectors.box.insertAdjacentHTML("beforebegin", `<h1>FORTUNE ${cat}</h1>`);
@@ -19,18 +20,21 @@ function RandomChoice() {
   console.log(rand, rchoices.length);
   return rchoices[choice];
 }
-const mike = "mike";
+
 DOMselectors.button.addEventListener("click", function () {
   let input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML(
     "beforeend",
-    `<div id= "container><p>${input}, ${RandomChoice()}</p>
+    `<div id= "container"><p>${input}, ${RandomChoice()}</p>
     <button class="remove" id="btn4">remove</button></div>`
   );
   DOMselectors.input.value = "";
   let container = document.getElementById("container");
-  let remove = document.getElementById("btn4");
+  container.addEventListener("click", function () {
+    container.remove();
+  });
 });
+
 DOMselectors.clearbtn.addEventListener("click", function () {
   let input = DOMselectors.input.value;
   DOMselectors.input.value = "";
