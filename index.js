@@ -1,5 +1,5 @@
 const DOMselectors = {
-  button: document.getElementById("btn"),
+  clickbutton: document.getElementById("clickbtn"),
   box: document.getElementById("container-box"),
   input: document.querySelector("#input"),
   clearbtn: document.getElementById("clearbtn"),
@@ -21,12 +21,12 @@ function RandomChoice() {
   return rchoices[choice];
 }
 
-DOMselectors.button.addEventListener("click", function () {
+DOMselectors.clickbutton.addEventListener("click", function () {
   let input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML(
     "beforeend",
     `<div id= "container"><p>${input}, ${RandomChoice()}</p>
-    <button class="remove" id="btn4">remove</button></div>`
+    <button class="remove"">remove</button></div>`
   );
   DOMselectors.input.value = "";
   let container = document.getElementById("container");
