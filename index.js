@@ -5,9 +5,10 @@ const DOMselectors = {
   clearbtn: document.getElementById("clearbtn"),
   button2: document.querySelectorAll(".remove"),
   container: document.getElementById("container"),
+  body: document.body,
 };
 const cat = "TELLER";
-DOMselectors.box.insertAdjacentHTML("beforebegin", `<h1>FORTUNE ${cat}</h1>`);
+DOMselectors.body.insertAdjacentHTML("afterbegin", `<h1>FORTUNE ${cat}</h1>`);
 const rchoices = [
   "you will enroll in Hustlers University",
   "what color is your Bugatti???",
@@ -24,12 +25,13 @@ function RandomChoice() {
 DOMselectors.clickbutton.addEventListener("click", function () {
   let input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML(
-    "beforeend",
+    "afterBegin",
     `<div id= "container"><p>${input}, ${RandomChoice()}</p>
     <button class="remove"">remove</button></div>`
   );
   DOMselectors.input.value = "";
   let container = document.getElementById("container");
+  console.log(container);
   container.addEventListener("click", function () {
     container.remove();
   });
